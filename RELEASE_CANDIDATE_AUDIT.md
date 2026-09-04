@@ -2,7 +2,7 @@
 
 ## 问题、方法、最终结果
 
-目标是在首次公开发布前，核验许可证、公开资产边界、可运行性、论文数值、敏感信息和远端 Git 状态。方法为 `DEBUG / READ_ONLY_RELEASE_AUDIT`：只读取科研源资产和远端状态；在开源目录内仅修正了错误的公开元数据与文档措辞。最终结果：`GITHUB_RELEASE_CANDIDATE_READY = FAIL`；未创建 commit，未 push。
+目标是在首次公开发布前，核验许可证、公开资产边界、可运行性、论文数值、敏感信息和远端 Git 状态。方法为 `DEBUG / READ_ONLY_RELEASE_AUDIT`：只读取科研源资产和远端状态；在开源目录内仅修正了错误的公开元数据与文档措辞。最终结果：`GITHUB_RELEASE_CANDIDATE_READY = FAIL`。审计结束后，仓库所有者明确授权仅推送代码；因此已创建本地 commit，但 HTTPS 推送因当前会话缺少 GitHub 凭据失败，远端未改变。
 
 ## 一句话结论
 
@@ -51,3 +51,7 @@
 1. 由有权主体书面确认本仓库原创代码/数值整理资产的版权持有人及 Apache-2.0 授权；随后才能创建标准 `LICENSE`。
 2. 由论文 authority 确认公开 comparator denominator、Finnish outcome 和 Table 1 delta 方向；只可选择/标注正确的现有冻结资产，不可重算或改写结果。
 3. 所有者确认远端初始 README 的安全合并方案后，再进行一次新的 release-candidate 审计、首个 commit 和非强制 push。
+
+## 审计后的用户授权执行记录
+
+仓库所有者在本审计后明确授权覆盖远端、只推送代码。已创建本地 root commit `34c59d53732de29c68fc13f67f1fe017f724e821`（`Initial public release of Depth-Gap Gain`），并尝试 `git push --force -u origin main`。推送未通过：当前会话没有 GitHub HTTPS 凭据，Git 报告无法读取用户名；远端仍停留在 `be183cae90a56b18178f7735548e465ca7f96ff0`。没有写入 token、密码或 credential 文件。该授权不改变上文的科学或许可证 Gate。
