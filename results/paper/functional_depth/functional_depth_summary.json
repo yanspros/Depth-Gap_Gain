@@ -1,0 +1,432 @@
+{
+  "bootstrap": {
+    "ci": "two-sided percentile 95%",
+    "replicates": 10000,
+    "seed": 20260831,
+    "unit": "target"
+  },
+  "claim_level": "LEVEL_A",
+  "languages": {
+    "burmese": {
+      "adjacent": {
+        "M12_16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262031,
+          "ci95": [
+            -0.022435399861104835,
+            -0.006961146201779368
+          ],
+          "point": -0.014333737180690408,
+          "target_count": 384
+        },
+        "M16_20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262032,
+          "ci95": [
+            0.005769433823149044,
+            0.020292365799914766
+          ],
+          "point": 0.012815043598450591,
+          "target_count": 384
+        },
+        "M20_24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262033,
+          "ci95": [
+            -0.022272084235507247,
+            -0.007060440561260233
+          ],
+          "point": -0.014487312936197805,
+          "target_count": 384
+        },
+        "M24_28": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262034,
+          "ci95": [
+            -0.026906253941857562,
+            -0.013582693705946964
+          ],
+          "point": -0.02022080780847397,
+          "target_count": 384
+        }
+      },
+      "cer": {
+        "A28": 0.12661467842943194,
+        "S12": 0.16284149275634352,
+        "S16": 0.14850775557565313,
+        "S20": 0.16132279917410372,
+        "S24": 0.1468354862379059
+      },
+      "delta_vs_a28": {
+        "S12": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261031,
+          "ci95": [
+            0.026064399285958304,
+            0.04737796129682541
+          ],
+          "point": 0.03622681432691159,
+          "target_count": 384
+        },
+        "S16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261032,
+          "ci95": [
+            0.014252498765368866,
+            0.029689907517331734
+          ],
+          "point": 0.021893077146221185,
+          "target_count": 384
+        },
+        "S20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261033,
+          "ci95": [
+            0.02544122579365896,
+            0.044192454693701415
+          ],
+          "point": 0.03470812074467178,
+          "target_count": 384
+        },
+        "S24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261034,
+          "ci95": [
+            0.013490548607653636,
+            0.026955655092289154
+          ],
+          "point": 0.02022080780847397,
+          "target_count": 384
+        }
+      },
+      "monotonicity": {
+        "adjacent_definitions": {
+          "M12_16": "CER(S16)-CER(S12)",
+          "M16_20": "CER(S20)-CER(S16)",
+          "M20_24": "CER(S24)-CER(S20)",
+          "M24_28": "CER(A28)-CER(S24)"
+        },
+        "point_estimate_monotonicity_violation": true,
+        "resolved_monotonicity_violation": true,
+        "unresolved_nonmonotonic_tendency": false
+      },
+      "target_count": 384
+    },
+    "finnish": {
+      "adjacent": {
+        "M12_16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262131,
+          "ci95": [
+            -0.05332627433020301,
+            -0.019574748650570385
+          ],
+          "point": -0.03604310232132519,
+          "target_count": 415
+        },
+        "M16_20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262132,
+          "ci95": [
+            -0.021219783316653442,
+            -0.00426907463975902
+          ],
+          "point": -0.012437671578239677,
+          "target_count": 415
+        },
+        "M20_24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262133,
+          "ci95": [
+            -0.005265582109925615,
+            0.01271058300641672
+          ],
+          "point": 0.0031747810334846025,
+          "target_count": 415
+        },
+        "M24_28": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20262134,
+          "ci95": [
+            -0.013995590175347742,
+            0.00420855017602718
+          ],
+          "point": -0.004482043811978262,
+          "target_count": 415
+        }
+      },
+      "cer": {
+        "A28": 0.02760191980876613,
+        "S12": 0.07738995648682466,
+        "S16": 0.04134685416549947,
+        "S20": 0.02890918258725979,
+        "S24": 0.03208396362074439
+      },
+      "delta_vs_a28": {
+        "S12": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261131,
+          "ci95": [
+            0.03456001685262201,
+            0.06661529068181166
+          ],
+          "point": 0.04978803667805853,
+          "target_count": 415
+        },
+        "S16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261132,
+          "ci95": [
+            0.005172948429475096,
+            0.022891226387575615
+          ],
+          "point": 0.013744934356733338,
+          "target_count": 415
+        },
+        "S20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261133,
+          "ci95": [
+            -0.004817680098350066,
+            0.007396418712837729
+          ],
+          "point": 0.0013072627784936597,
+          "target_count": 415
+        },
+        "S24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261134,
+          "ci95": [
+            -0.004181714845956027,
+            0.013888446024811804
+          ],
+          "point": 0.004482043811978262,
+          "target_count": 415
+        }
+      },
+      "monotonicity": {
+        "adjacent_definitions": {
+          "M12_16": "CER(S16)-CER(S12)",
+          "M16_20": "CER(S20)-CER(S16)",
+          "M20_24": "CER(S24)-CER(S20)",
+          "M24_28": "CER(A28)-CER(S24)"
+        },
+        "point_estimate_monotonicity_violation": true,
+        "resolved_monotonicity_violation": false,
+        "unresolved_nonmonotonic_tendency": true
+      },
+      "target_count": 415
+    },
+    "khmer": {
+      "adjacent": {
+        "M12_16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261831,
+          "ci95": [
+            0.0016424248935738683,
+            0.02449691939837028
+          ],
+          "point": 0.013251234987006298,
+          "target_count": 326
+        },
+        "M16_20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261832,
+          "ci95": [
+            -0.00679129390785828,
+            0.016242598765926018
+          ],
+          "point": 0.004612178961908553,
+          "target_count": 326
+        },
+        "M20_24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261833,
+          "ci95": [
+            -0.015315430398442955,
+            0.007515945981113035
+          ],
+          "point": -0.003769344227752675,
+          "target_count": 326
+        },
+        "M24_28": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261834,
+          "ci95": [
+            -0.005031381330008936,
+            0.017260806452103643
+          ],
+          "point": 0.005970079366937466,
+          "target_count": 326
+        }
+      },
+      "cer": {
+        "A28": 0.24968978999367875,
+        "S12": 0.2296256409055791,
+        "S16": 0.2428768758925854,
+        "S20": 0.24748905485449396,
+        "S24": 0.24371971062674128
+      },
+      "delta_vs_a28": {
+        "S12": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260831,
+          "ci95": [
+            -0.03247048785563943,
+            -0.0073974939468241865
+          ],
+          "point": -0.020064149088099642,
+          "target_count": 326
+        },
+        "S16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260832,
+          "ci95": [
+            -0.018788700129940387,
+            0.005116337932890529
+          ],
+          "point": -0.0068129141010933435,
+          "target_count": 326
+        },
+        "S20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260833,
+          "ci95": [
+            -0.013454385741306415,
+            0.00924210536789345
+          ],
+          "point": -0.0022007351391847914,
+          "target_count": 326
+        },
+        "S24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260834,
+          "ci95": [
+            -0.0172887450931124,
+            0.004829674751702895
+          ],
+          "point": -0.005970079366937466,
+          "target_count": 326
+        }
+      },
+      "monotonicity": {
+        "adjacent_definitions": {
+          "M12_16": "CER(S16)-CER(S12)",
+          "M16_20": "CER(S20)-CER(S16)",
+          "M20_24": "CER(S24)-CER(S20)",
+          "M24_28": "CER(A28)-CER(S24)"
+        },
+        "point_estimate_monotonicity_violation": true,
+        "resolved_monotonicity_violation": true,
+        "unresolved_nonmonotonic_tendency": true
+      },
+      "target_count": 326
+    },
+    "lao": {
+      "adjacent": {
+        "M12_16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261931,
+          "ci95": [
+            0.016928600529161814,
+            0.08155514460914025
+          ],
+          "point": 0.04814594668739427,
+          "target_count": 191
+        },
+        "M16_20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261932,
+          "ci95": [
+            0.011099682258989475,
+            0.0818970857820515
+          ],
+          "point": 0.04617987289104293,
+          "target_count": 191
+        },
+        "M20_24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261933,
+          "ci95": [
+            -0.047424370871945204,
+            0.022916325214616385
+          ],
+          "point": -0.011522106899547345,
+          "target_count": 191
+        },
+        "M24_28": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20261934,
+          "ci95": [
+            -0.0787134028716674,
+            -0.008562309038836789
+          ],
+          "point": -0.043436514105436426,
+          "target_count": 191
+        }
+      },
+      "cer": {
+        "A28": 0.3498696904576837,
+        "S12": 0.31050249188423024,
+        "S16": 0.35864843857162454,
+        "S20": 0.40482831146266746,
+        "S24": 0.3933062045631201
+      },
+      "delta_vs_a28": {
+        "S12": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260931,
+          "ci95": [
+            -0.07354338687752712,
+            -0.007089228286316561
+          ],
+          "point": -0.03936719857345343,
+          "target_count": 191
+        },
+        "S16": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260932,
+          "ci95": [
+            -0.026609789691630484,
+            0.04476813351280503
+          ],
+          "point": 0.008778748113940835,
+          "target_count": 191
+        },
+        "S20": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260933,
+          "ci95": [
+            0.020581689093272956,
+            0.09061494203076911
+          ],
+          "point": 0.05495862100498377,
+          "target_count": 191
+        },
+        "S24": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 20260934,
+          "ci95": [
+            0.007861843606794226,
+            0.07848919426076359
+          ],
+          "point": 0.043436514105436426,
+          "target_count": 191
+        }
+      },
+      "monotonicity": {
+        "adjacent_definitions": {
+          "M12_16": "CER(S16)-CER(S12)",
+          "M16_20": "CER(S20)-CER(S16)",
+          "M20_24": "CER(S24)-CER(S20)",
+          "M24_28": "CER(A28)-CER(S24)"
+        },
+        "point_estimate_monotonicity_violation": true,
+        "resolved_monotonicity_violation": true,
+        "unresolved_nonmonotonic_tendency": false
+      },
+      "target_count": 191
+    }
+  },
+  "scope": "post-hoc development-only supporting functional analysis; not a DGG decision or held-out PEFT result"
+}

@@ -1,0 +1,18 @@
+# Paths are supplied by the user; no internal environment path is assumed.
+data_root: ${DATA_ROOT}
+model_root: ${MODEL_ROOT}
+output_dir: ${OUTPUT_DIR}
+base_checkpoint: base-model-directory
+full_sft_probe_checkpoint: full-sft-probe-directory
+development_manifest: manifests/fleurs_dev.json
+layers: 28
+suffix_depth: 16
+tau_R: 0.5
+bootstrap:
+  unit: target_id
+  replicates: 10000
+  seed: 20260831
+hybrid_boundary:
+  embedding: base
+  acoustic_output: base
+  transformer_blocks: suffix_from_full_sft

@@ -1,0 +1,71 @@
+{
+  "definition": "CER(S16) - CER(A28)",
+  "languages": {
+    "burmese": {
+      "bootstrap": {
+        "ci": "two-sided percentile 95%",
+        "definition_cn": "同一target_uid成对重采样；C6-B算法不变，target_id别名等于target_uid",
+        "replicates": 10000,
+        "seed": 20260810,
+        "unit": "target_uid"
+      },
+      "ci95": [
+        0.014000253316698198,
+        0.02978214780213389
+      ],
+      "decision": "FULL_28",
+      "panel": "fleurs_validation",
+      "point": 0.021893077146221185,
+      "q16": "FAIL"
+    },
+    "finnish": {
+      "bootstrap": {
+        "ci": "two-sided percentile 95%",
+        "replicates": 10000,
+        "seed": 20260809,
+        "unit": "target_id"
+      },
+      "ci95": [
+        0.004939101102855587,
+        0.022326630535261148
+      ],
+      "decision": "FULL_28",
+      "panel": "fleurs_dev",
+      "point": 0.01337143070573515,
+      "q16": "PASS"
+    },
+    "khmer": {
+      "bootstrap": {
+        "ci": "two-sided percentile 95%",
+        "replicates": 10000,
+        "seed": 20260810,
+        "unit": "target_id"
+      },
+      "ci95": [
+        0.003480463088959297,
+        0.020271500062612413
+      ],
+      "decision": "FULL_28",
+      "panel": "dev_in_domain",
+      "point": 0.011668611435239206,
+      "q16": "NOT_APPLICABLE_DGG_FULL_PRIORITY"
+    },
+    "lao": {
+      "bootstrap": {
+        "ci": "two-sided percentile 95%",
+        "replicates": 10000,
+        "seed": 20260807,
+        "unit": "target_id"
+      },
+      "ci95": [
+        -0.02659214830816623,
+        0.044280343399564805
+      ],
+      "decision": "LATE_16",
+      "panel": "fleurs_dev",
+      "point": 0.008778748113940835,
+      "q16": "PASS"
+    }
+  },
+  "scope": "Read-only, development-only DGG comparator. Historical Khmer FLEURS/test panel is excluded. No PEFT outcome field is copied."
+}

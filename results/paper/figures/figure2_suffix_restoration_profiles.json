@@ -1,0 +1,73 @@
+{
+  "languages": {
+    "Burmese": [
+      {
+        "ci95_pp": [
+          1.4252498765368866,
+          2.9689907517331733
+        ],
+        "configuration": "S16",
+        "difference_pp": 2.1893077146221183
+      },
+      {
+        "ci95_pp": [
+          2.544122579365896,
+          4.419245469370141
+        ],
+        "configuration": "S20",
+        "difference_pp": 3.4708120744671778
+      },
+      {
+        "ci95_pp": [
+          1.3490548607653636,
+          2.6955655092289152
+        ],
+        "configuration": "S24",
+        "difference_pp": 2.022080780847397
+      },
+      {
+        "ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "configuration": "A28",
+        "difference_pp": 0.0
+      }
+    ],
+    "Lao": [
+      {
+        "ci95_pp": [
+          -2.6609789691630485,
+          4.476813351280503
+        ],
+        "configuration": "S16",
+        "difference_pp": 0.8778748113940835
+      },
+      {
+        "ci95_pp": [
+          2.0581689093272955,
+          9.061494203076911
+        ],
+        "configuration": "S20",
+        "difference_pp": 5.4958621004983765
+      },
+      {
+        "ci95_pp": [
+          0.7861843606794227,
+          7.848919426076359
+        ],
+        "configuration": "S24",
+        "difference_pp": 4.343651410543643
+      },
+      {
+        "ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "configuration": "A28",
+        "difference_pp": 0.0
+      }
+    ]
+  },
+  "scope": "Development-only post-hoc suffix-restoration profile; not a PEFT depth sweep."
+}

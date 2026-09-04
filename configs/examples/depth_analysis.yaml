@@ -1,0 +1,15 @@
+data_root: ${DATA_ROOT}
+model_root: ${MODEL_ROOT}
+output_dir: ${OUTPUT_DIR}
+restoration_grid: [S12, S16, S20, S24, A28]
+development_only: true
+embedding_source: Base
+acoustic_output_source: Base
+bootstrap:
+  unit: target_id
+  replicates: 10000
+  seed: 20260831
+holm_sensitivity:
+  hypotheses: 16
+  null_centered_bootstrap_replicates: 100000
+  familywise_alpha: 0.05

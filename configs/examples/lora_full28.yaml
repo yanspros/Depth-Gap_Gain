@@ -1,0 +1,9 @@
+allocation: Full-28
+active_layers: all_28
+rank: 12
+alpha: 12
+alpha_over_rank: 1.0
+dropout: 0.0
+bias: none
+expected_trainable_parameters: 7569408
+target_modules: [attn_q_proj, attn_k_proj, attn_v_proj, attn_o_proj, mlp_gate_proj, mlp_up_proj, mlp_down_proj]

@@ -1,0 +1,420 @@
+{
+  "family": {
+    "alpha": 0.05,
+    "correction": "Holm step-down family-wise correction",
+    "direction": "CER worsening > 0",
+    "hypothesis_count": 16,
+    "members": [
+      "khmer/M12_16",
+      "khmer/M16_20",
+      "khmer/M20_24",
+      "khmer/M24_28",
+      "lao/M12_16",
+      "lao/M16_20",
+      "lao/M20_24",
+      "lao/M24_28",
+      "burmese/M12_16",
+      "burmese/M16_20",
+      "burmese/M20_24",
+      "burmese/M24_28",
+      "finnish/M12_16",
+      "finnish/M16_20",
+      "finnish/M20_24",
+      "finnish/M24_28"
+    ]
+  },
+  "interpretation": "The corrected result is a post-hoc robustness analysis. It neither replaces frozen nominal FDL CIs nor changes DGG/Q16 or PEFT decisions.",
+  "raw_pvalue_method": {
+    "detail": "The raw p-value is post-hoc and is separate from the frozen percentile CI. Each replicate reaggregates corpus CER difference from existing per-target edit counts and reference-character counts under the centered null.",
+    "name": "null-centered paired target bootstrap",
+    "replicates": 100000,
+    "smoothing": "(extreme + 1)/(B + 1)"
+  },
+  "results": [
+    {
+      "comparison": "M12_16",
+      "definition": "CER(S16) - CER(S12)",
+      "holm_adjusted_pvalue": 0.14533854661453385,
+      "holm_rank": 4,
+      "language": "khmer",
+      "nominal_ci95": [
+        0.0016424248935738683,
+        0.02449691939837028
+      ],
+      "nominal_ci95_pp": [
+        0.16424248935738683,
+        2.449691939837028
+      ],
+      "nominal_resolved_worsening": true,
+      "raw_effect": 0.013251234987006298,
+      "raw_effect_pp": 1.32512349870063,
+      "raw_one_sided_pvalue": 0.01117988820111799,
+      "raw_pvalue_extreme_count": 1117,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090200,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 326
+    },
+    {
+      "comparison": "M16_20",
+      "definition": "CER(S20) - CER(S16)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 6,
+      "language": "khmer",
+      "nominal_ci95": [
+        -0.00679129390785828,
+        0.016242598765926018
+      ],
+      "nominal_ci95_pp": [
+        -0.679129390785828,
+        1.6242598765926017
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": 0.004612178961908553,
+      "raw_effect_pp": 0.46121789619085524,
+      "raw_one_sided_pvalue": 0.2182278177218228,
+      "raw_pvalue_extreme_count": 21822,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090201,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 326
+    },
+    {
+      "comparison": "M20_24",
+      "definition": "CER(S24) - CER(S20)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 8,
+      "language": "khmer",
+      "nominal_ci95": [
+        -0.015315430398442955,
+        0.007515945981113035
+      ],
+      "nominal_ci95_pp": [
+        -1.5315430398442955,
+        0.7515945981113035
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.003769344227752675,
+      "raw_effect_pp": -0.37693442277526745,
+      "raw_one_sided_pvalue": 0.7380926190738093,
+      "raw_pvalue_extreme_count": 73809,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090202,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 326
+    },
+    {
+      "comparison": "M24_28",
+      "definition": "CER(A28) - CER(S24)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 5,
+      "language": "khmer",
+      "nominal_ci95": [
+        -0.005031381330008936,
+        0.017260806452103643
+      ],
+      "nominal_ci95_pp": [
+        -0.5031381330008936,
+        1.7260806452103643
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": 0.005970079366937466,
+      "raw_effect_pp": 0.5970079366937466,
+      "raw_one_sided_pvalue": 0.14628853711462886,
+      "raw_pvalue_extreme_count": 14628,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090203,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 326
+    },
+    {
+      "comparison": "M12_16",
+      "definition": "CER(S16) - CER(S12)",
+      "holm_adjusted_pvalue": 0.040349596504034954,
+      "holm_rank": 2,
+      "language": "lao",
+      "nominal_ci95": [
+        0.016928600529161814,
+        0.08155514460914025
+      ],
+      "nominal_ci95_pp": [
+        1.6928600529161812,
+        8.155514460914025
+      ],
+      "nominal_resolved_worsening": true,
+      "raw_effect": 0.04814594668739427,
+      "raw_effect_pp": 4.814594668739427,
+      "raw_one_sided_pvalue": 0.002689973100268997,
+      "raw_pvalue_extreme_count": 268,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090210,
+      "supports_worsening_after_holm_alpha_0_05": true,
+      "target_count": 191
+    },
+    {
+      "comparison": "M16_20",
+      "definition": "CER(S20) - CER(S16)",
+      "holm_adjusted_pvalue": 0.08581914180858191,
+      "holm_rank": 3,
+      "language": "lao",
+      "nominal_ci95": [
+        0.011099682258989475,
+        0.0818970857820515
+      ],
+      "nominal_ci95_pp": [
+        1.1099682258989476,
+        8.18970857820515
+      ],
+      "nominal_resolved_worsening": true,
+      "raw_effect": 0.04617987289104293,
+      "raw_effect_pp": 4.617987289104293,
+      "raw_one_sided_pvalue": 0.0061299387006129935,
+      "raw_pvalue_extreme_count": 612,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090211,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 191
+    },
+    {
+      "comparison": "M20_24",
+      "definition": "CER(S24) - CER(S20)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 9,
+      "language": "lao",
+      "nominal_ci95": [
+        -0.047424370871945204,
+        0.022916325214616385
+      ],
+      "nominal_ci95_pp": [
+        -4.742437087194521,
+        2.2916325214616386
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.011522106899547345,
+      "raw_effect_pp": -1.1522106899547346,
+      "raw_one_sided_pvalue": 0.7417025829741702,
+      "raw_pvalue_extreme_count": 74170,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090212,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 191
+    },
+    {
+      "comparison": "M24_28",
+      "definition": "CER(A28) - CER(S24)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 11,
+      "language": "lao",
+      "nominal_ci95": [
+        -0.0787134028716674,
+        -0.008562309038836789
+      ],
+      "nominal_ci95_pp": [
+        -7.871340287166741,
+        -0.8562309038836788
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.043436514105436426,
+      "raw_effect_pp": -4.343651410543643,
+      "raw_one_sided_pvalue": 0.992420075799242,
+      "raw_pvalue_extreme_count": 99242,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090213,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 191
+    },
+    {
+      "comparison": "M12_16",
+      "definition": "CER(S16) - CER(S12)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 13,
+      "language": "burmese",
+      "nominal_ci95": [
+        -0.022435399861104835,
+        -0.006961146201779368
+      ],
+      "nominal_ci95_pp": [
+        -2.2435399861104837,
+        -0.6961146201779368
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.014333737180690408,
+      "raw_effect_pp": -1.433373718069041,
+      "raw_one_sided_pvalue": 0.999610003899961,
+      "raw_pvalue_extreme_count": 99961,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090220,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 384
+    },
+    {
+      "comparison": "M16_20",
+      "definition": "CER(S20) - CER(S16)",
+      "holm_adjusted_pvalue": 0.0065599344006559935,
+      "holm_rank": 1,
+      "language": "burmese",
+      "nominal_ci95": [
+        0.005769433823149044,
+        0.020292365799914766
+      ],
+      "nominal_ci95_pp": [
+        0.5769433823149044,
+        2.0292365799914767
+      ],
+      "nominal_resolved_worsening": true,
+      "raw_effect": 0.012815043598450591,
+      "raw_effect_pp": 1.281504359845059,
+      "raw_one_sided_pvalue": 0.0004099959000409996,
+      "raw_pvalue_extreme_count": 40,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090221,
+      "supports_worsening_after_holm_alpha_0_05": true,
+      "target_count": 384
+    },
+    {
+      "comparison": "M20_24",
+      "definition": "CER(S24) - CER(S20)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 14,
+      "language": "burmese",
+      "nominal_ci95": [
+        -0.022272084235507247,
+        -0.007060440561260233
+      ],
+      "nominal_ci95_pp": [
+        -2.227208423550725,
+        -0.7060440561260233
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.014487312936197805,
+      "raw_effect_pp": -1.4487312936197805,
+      "raw_one_sided_pvalue": 0.999870001299987,
+      "raw_pvalue_extreme_count": 99987,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090222,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 384
+    },
+    {
+      "comparison": "M24_28",
+      "definition": "CER(A28) - CER(S24)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 16,
+      "language": "burmese",
+      "nominal_ci95": [
+        -0.026906253941857562,
+        -0.013582693705946964
+      ],
+      "nominal_ci95_pp": [
+        -2.6906253941857563,
+        -1.3582693705946964
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.02022080780847397,
+      "raw_effect_pp": -2.022080780847397,
+      "raw_one_sided_pvalue": 1.0,
+      "raw_pvalue_extreme_count": 100000,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090223,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 384
+    },
+    {
+      "comparison": "M12_16",
+      "definition": "CER(S16) - CER(S12)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 15,
+      "language": "finnish",
+      "nominal_ci95": [
+        -0.05332627433020301,
+        -0.019574748650570385
+      ],
+      "nominal_ci95_pp": [
+        -5.332627433020301,
+        -1.9574748650570386
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.03604310232132519,
+      "raw_effect_pp": -3.604310232132519,
+      "raw_one_sided_pvalue": 0.99990000099999,
+      "raw_pvalue_extreme_count": 99990,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090230,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 415
+    },
+    {
+      "comparison": "M16_20",
+      "definition": "CER(S20) - CER(S16)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 12,
+      "language": "finnish",
+      "nominal_ci95": [
+        -0.021219783316653442,
+        -0.00426907463975902
+      ],
+      "nominal_ci95_pp": [
+        -2.121978331665344,
+        -0.426907463975902
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.012437671578239677,
+      "raw_effect_pp": -1.2437671578239677,
+      "raw_one_sided_pvalue": 0.996470035299647,
+      "raw_pvalue_extreme_count": 99647,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090231,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 415
+    },
+    {
+      "comparison": "M20_24",
+      "definition": "CER(S24) - CER(S20)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 7,
+      "language": "finnish",
+      "nominal_ci95": [
+        -0.005265582109925615,
+        0.01271058300641672
+      ],
+      "nominal_ci95_pp": [
+        -0.5265582109925615,
+        1.271058300641672
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": 0.0031747810334846025,
+      "raw_effect_pp": 0.31747810334846027,
+      "raw_one_sided_pvalue": 0.23453765462345377,
+      "raw_pvalue_extreme_count": 23453,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090232,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 415
+    },
+    {
+      "comparison": "M24_28",
+      "definition": "CER(A28) - CER(S24)",
+      "holm_adjusted_pvalue": 1.0,
+      "holm_rank": 10,
+      "language": "finnish",
+      "nominal_ci95": [
+        -0.013995590175347742,
+        0.00420855017602718
+      ],
+      "nominal_ci95_pp": [
+        -1.3995590175347743,
+        0.420855017602718
+      ],
+      "nominal_resolved_worsening": false,
+      "raw_effect": -0.004482043811978262,
+      "raw_effect_pp": -0.44820438119782624,
+      "raw_one_sided_pvalue": 0.8362316376836232,
+      "raw_pvalue_extreme_count": 83623,
+      "raw_pvalue_replicates": 100000,
+      "raw_pvalue_seed": 2026090233,
+      "supports_worsening_after_holm_alpha_0_05": false,
+      "target_count": 415
+    }
+  ],
+  "status": "FDL_CORRECTION_PARTIAL"
+}

@@ -1,0 +1,8 @@
+# CPU-only core and paper-result reproduction
+numpy>=1.24
+matplotlib>=3.7
+pytest>=8.0
+
+# Optional GPU integration (install separately when reproducing model runs):
+# torch>=2.4
+# peft>=0.10

@@ -1,0 +1,21 @@
+# Audio, checkpoints, generated outputs, and caches are intentionally excluded.
+*.wav
+*.flac
+*.mp3
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+model_cache/
+checkpoints/
+outputs/
+logs/
+.cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.env
+artifacts/

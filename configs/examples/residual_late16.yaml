@@ -1,0 +1,7 @@
+allocation: Late-16
+active_layers: [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+hidden_size: 1024
+bottleneck_dim: 225
+structure: RMSNorm -> Down -> Up -> scale -> residual
+activation: none
+expected_trainable_parameters: 7409184

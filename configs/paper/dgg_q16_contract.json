@@ -1,0 +1,23 @@
+{
+  "dgg": "CER(S16) - CER(A28)",
+  "transformer_blocks": 28,
+  "S16": {"base_blocks": "0-11", "full_sft_probe_blocks": "12-27"},
+  "A28": {"base_blocks": "none", "full_sft_probe_blocks": "0-27"},
+  "hybrid_non_transformer_modules": "Base",
+  "tau_R": 0.5,
+  "full_panel_Q16": [
+    "Base-to-Full-SFT gain bootstrap lower bound > 0",
+    "Base-to-S16 gain bootstrap lower bound > 0",
+    "R16 >= tau_R"
+  ],
+  "leave_one_target_out_Q16": [
+    "S16 gain point estimate > 0",
+    "R16 >= tau_R",
+    "no leave-one-out bootstrap"
+  ],
+  "decision": {
+    "Full-28": "DGG point > 0 and 95% CI lower bound > 0",
+    "Late-16": "DGG point >= 0, CI includes zero, and Q16 passes",
+    "No Prediction": "otherwise; negative DGG is never a Late-16 decision"
+  }
+}

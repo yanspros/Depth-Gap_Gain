@@ -1,0 +1,209 @@
+{
+  "aggregate": {
+    "all_primary_language_or_panel_directions_unchanged": true,
+    "full_branch_caveat_cn": "Khmer/Burmese的FULL由显著正DGG优先决定；它们随tau不变是规则结构结果，不是Q16阈值对Full分支的独立验证。",
+    "gate_candidate": "C18_RETENTION_THRESHOLD_ROBUST",
+    "late_branch": {
+      "decisions": {
+        "0.3": "LATE",
+        "0.5": "LATE",
+        "0.7": "LATE"
+      },
+      "language": "Lao",
+      "margin_above_0_5": 0.2230077120822621,
+      "margin_above_0_7": 0.023007712082262155,
+      "tau_max": 0.7230077120822621
+    },
+    "meaningful_threshold_test": "Lao formal validation is the only DGG-unresolved, Q16-dependent Late branch."
+  },
+  "analysis_type": "POST_HOC_SENSITIVITY_ANALYSIS",
+  "entries": [
+    {
+      "dgg": {
+        "ci95": [
+          0.003480463088959297,
+          0.020271500062612413
+        ],
+        "definition": "CER(Suffix-16) - CER(All-28)",
+        "not_significant": false,
+        "point": 0.011668611435239206,
+        "significant_positive": true
+      },
+      "direction_unchanged_at_all_frozen_thresholds": true,
+      "historical_frozen_decision": "FULL",
+      "language": "Khmer",
+      "minimum_leave_one_target_out_r16": 0.41223404255319146,
+      "panel": "dev_in_domain",
+      "r16": 0.5054945054945058,
+      "threshold_results": {
+        "0.3": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": true,
+          "q16": true,
+          "retention_point_pass": true,
+          "tau_r": 0.3
+        },
+        "0.5": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": true,
+          "tau_r": 0.5
+        },
+        "0.7": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": false,
+          "tau_r": 0.7
+        }
+      }
+    },
+    {
+      "dgg": {
+        "ci95": [
+          0.003101247729545048,
+          0.01894901210616881
+        ],
+        "definition": "CER(Suffix-16) - CER(All-28)",
+        "not_significant": false,
+        "point": 0.011029411764705883,
+        "significant_positive": true
+      },
+      "direction_unchanged_at_all_frozen_thresholds": true,
+      "historical_frozen_decision": "FULL",
+      "language": "Khmer",
+      "minimum_leave_one_target_out_r16": 0.3367003367003369,
+      "panel": "fleurs",
+      "r16": 0.432258064516128,
+      "threshold_results": {
+        "0.3": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": true,
+          "q16": false,
+          "retention_point_pass": true,
+          "tau_r": 0.3
+        },
+        "0.5": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": false,
+          "tau_r": 0.5
+        },
+        "0.7": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": false,
+          "tau_r": 0.7
+        }
+      }
+    },
+    {
+      "dgg": {
+        "ci95": [
+          -0.02659214830816623,
+          0.044280343399564805
+        ],
+        "definition": "CER(Suffix-16) - CER(All-28)",
+        "not_significant": true,
+        "point": 0.008778748113940835,
+        "significant_positive": false,
+        "source_definition": "CER(all_28) - CER(suffix_16)"
+      },
+      "direction_unchanged_at_all_frozen_thresholds": true,
+      "historical_frozen_decision": "LATE",
+      "language": "Lao",
+      "minimum_leave_one_target_out_r16": 0.7230077120822621,
+      "panel": "formal_validation",
+      "r16": 0.7673521850899743,
+      "threshold_results": {
+        "0.3": {
+          "decision": "LATE",
+          "decision_basis": "DGG_NOT_SIGNIFICANT_AND_Q16_PASS",
+          "leave_one_target_out_retention_pass": true,
+          "q16": true,
+          "retention_point_pass": true,
+          "tau_r": 0.3
+        },
+        "0.5": {
+          "decision": "LATE",
+          "decision_basis": "DGG_NOT_SIGNIFICANT_AND_Q16_PASS",
+          "leave_one_target_out_retention_pass": true,
+          "q16": true,
+          "retention_point_pass": true,
+          "tau_r": 0.5
+        },
+        "0.7": {
+          "decision": "LATE",
+          "decision_basis": "DGG_NOT_SIGNIFICANT_AND_Q16_PASS",
+          "leave_one_target_out_retention_pass": true,
+          "q16": true,
+          "retention_point_pass": true,
+          "tau_r": 0.7
+        }
+      }
+    },
+    {
+      "dgg": {
+        "ci95": [
+          0.014000253316698198,
+          0.02978214780213389
+        ],
+        "definition": "CER(Suffix-16) - CER(All-28)",
+        "not_significant": false,
+        "point": 0.021893077146221185,
+        "significant_positive": true
+      },
+      "direction_unchanged_at_all_frozen_thresholds": true,
+      "historical_frozen_decision": "FULL",
+      "language": "Burmese",
+      "minimum_leave_one_target_out_r16": -0.3231939163498099,
+      "panel": "formal_validation",
+      "r16": -0.2214022140221402,
+      "threshold_results": {
+        "0.3": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": false,
+          "tau_r": 0.3
+        },
+        "0.5": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": false,
+          "tau_r": 0.5
+        },
+        "0.7": {
+          "decision": "FULL",
+          "decision_basis": "DGG_SIGNIFICANT_POSITIVE",
+          "leave_one_target_out_retention_pass": false,
+          "q16": false,
+          "retention_point_pass": false,
+          "tau_r": 0.7
+        }
+      }
+    }
+  ],
+  "historical_contract_unchanged": {
+    "burmese_prospective_prediction_amended": false,
+    "original_tau_r": 0.5,
+    "v2_predictor_amended": false
+  },
+  "threshold_grid": [
+    0.3,
+    0.5,
+    0.7
+  ]
+}

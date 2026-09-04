@@ -1,0 +1,30 @@
+{
+  "description": "Synthetic logic test only; not paper data.",
+  "tau_R": 0.5,
+  "bootstrap": {"replicates": 2000, "seed": 20260831},
+  "conditions": {
+    "base": [
+      {"target_id": "t1", "edit_distance": 52, "reference_chars": 100},
+      {"target_id": "t2", "edit_distance": 48, "reference_chars": 100},
+      {"target_id": "t3", "edit_distance": 51, "reference_chars": 100},
+      {"target_id": "t4", "edit_distance": 49, "reference_chars": 100},
+      {"target_id": "t5", "edit_distance": 50, "reference_chars": 100},
+      {"target_id": "t6", "edit_distance": 53, "reference_chars": 100}
+    ],
+    "full_sft": [
+      {"target_id": "t1", "edit_distance": 22, "reference_chars": 100}, {"target_id": "t2", "edit_distance": 19, "reference_chars": 100},
+      {"target_id": "t3", "edit_distance": 21, "reference_chars": 100}, {"target_id": "t4", "edit_distance": 20, "reference_chars": 100},
+      {"target_id": "t5", "edit_distance": 20, "reference_chars": 100}, {"target_id": "t6", "edit_distance": 21, "reference_chars": 100}
+    ],
+    "s16": [
+      {"target_id": "t1", "edit_distance": 37, "reference_chars": 100}, {"target_id": "t2", "edit_distance": 33, "reference_chars": 100},
+      {"target_id": "t3", "edit_distance": 35, "reference_chars": 100}, {"target_id": "t4", "edit_distance": 34, "reference_chars": 100},
+      {"target_id": "t5", "edit_distance": 36, "reference_chars": 100}, {"target_id": "t6", "edit_distance": 37, "reference_chars": 100}
+    ],
+    "a28": [
+      {"target_id": "t1", "edit_distance": 22, "reference_chars": 100}, {"target_id": "t2", "edit_distance": 19, "reference_chars": 100},
+      {"target_id": "t3", "edit_distance": 21, "reference_chars": 100}, {"target_id": "t4", "edit_distance": 20, "reference_chars": 100},
+      {"target_id": "t5", "edit_distance": 20, "reference_chars": 100}, {"target_id": "t6", "edit_distance": 21, "reference_chars": 100}
+    ]
+  }
+}

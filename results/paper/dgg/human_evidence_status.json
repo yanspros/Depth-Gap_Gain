@@ -1,0 +1,6 @@
+{
+  "human_P_N_S": "UNAVAILABLE",
+  "canonical_status": "NOT_YET_RUN",
+  "reason": "The canonical server-side paper package lacks validated public provenance for a human-listening result. Automatic ASR and objective quality metrics are not substituted for human evidence.",
+  "redistributed": false
+}
