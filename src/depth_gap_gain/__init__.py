@@ -5,7 +5,7 @@ diagnostic helpers.  Model-specific OmniVoice loading remains an integration
 task because checkpoints, audio, and evaluators are deliberately not shipped.
 """
 
-from .dgg import analyze_dgg, decide_depth, evaluate_q16
+from .dgg import analyze_dgg, decide_depth, evaluate_probe_eligibility, evaluate_q16
 
-__all__ = ["analyze_dgg", "decide_depth", "evaluate_q16"]
+__all__ = ["analyze_dgg", "decide_depth", "evaluate_probe_eligibility", "evaluate_q16"]
 __version__ = "0.1.0"

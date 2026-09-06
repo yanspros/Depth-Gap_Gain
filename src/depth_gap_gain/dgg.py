@@ -18,6 +18,37 @@ def _gain_records(base: list[Mapping[str, Any]], other: list[Mapping[str, Any]],
     return base_edits, other_edits, chars
 
 
+def evaluate_probe_eligibility(q16_or_gain: Mapping[str, Any]) -> dict[str, Any]:
+    """Evaluate the global Full-SFT probe-eligibility precondition.
+
+    This is intentionally separate from Q16's S16 sufficiency checks.
+    The frozen selector cannot return either bounded-depth allocation when the
+    Base-to-Full-SFT development gain does not have a strictly positive paired
+    bootstrap lower bound (Base->Full-SFT 95% CI lower bound <= 0).
+    """
+    try:
+        if "full_sft_gain" in q16_or_gain:
+            lower = float(q16_or_gain["full_sft_gain"]["ci95"][0])
+        elif "ci95" in q16_or_gain:
+            lower = float(q16_or_gain["ci95"][0])
+        else:
+            return {
+                "passed": False,
+                "reason": "Full-SFT gain confidence interval is unavailable or invalid",
+            }
+    except (KeyError, IndexError, TypeError, ValueError):
+        return {
+            "passed": False,
+            "reason": "Full-SFT gain confidence interval is unavailable or invalid",
+        }
+    if lower > 0:
+        return {"passed": True, "reason": None}
+    return {
+        "passed": False,
+        "reason": "Full-SFT gain lower bound <= 0",
+    }
+
+
 def evaluate_q16(
     base: list[Mapping[str, Any]],
     full_sft: list[Mapping[str, Any]],
@@ -57,6 +88,7 @@ def evaluate_q16(
         and loo_positive
         and loo_retained
     )
+    finite_loo_r16 = loo_r16[np.isfinite(loo_r16)]
     return {
         "tau_R": float(tau_r),
         "full_sft_gain": full_gain,
@@ -67,21 +99,41 @@ def evaluate_q16(
             "all_positive_s16_gain": loo_positive,
             "all_R16_at_least_tau_R": loo_retained,
             "minimum_s16_gain": float(np.min(loo_gain)),
-            "minimum_R16": float(np.nanmin(loo_r16)),
+            "minimum_R16": float(np.min(finite_loo_r16)) if len(finite_loo_r16) else None,
         },
         "Q16": passed,
     }
 
 
-def decide_depth(dgg: Mapping[str, Any], q16: Mapping[str, Any]) -> str:
-    """Return the frozen bounded-depth decision without outcome information."""
+def decide_depth(
+    dgg: Mapping[str, Any],
+    q16: Mapping[str, Any],
+    *,
+    probe_eligible: bool,
+) -> str:
+    """Return the bounded-depth decision according to Eq.(4) and final scientific contract.
+
+    1. Global eligibility check:
+       If probe_eligible is False (Base->Full-SFT 95% CI lower bound <= 0),
+       return "No Prediction" regardless of DGG.
+    2. Full-28 branch:
+       probe_eligible is True and DGG point > 0 and CI_lower(DGG) > 0 -> "Full-28".
+    3. Late-16 branch:
+       probe_eligible is True and CI_lower(DGG) <= 0 <= CI_upper(DGG) and Q16 == True -> "Late-16".
+       (Does not require DGG point >= 0).
+    4. Fully negative DGG interval (CI_upper(DGG) < 0) or any other case -> "No Prediction".
+    """
+    if not probe_eligible:
+        return "No Prediction"
     point = float(dgg["point"])
     lower, upper = (float(value) for value in dgg["ci95"])
+    # Full-28: strictly positive DGG interval
     if point > 0 and lower > 0:
         return "Full-28"
-    # A negative DGG is not part of the pre-defined Late-16 decision region.
-    if point >= 0 and lower <= 0 <= upper and bool(q16["Q16"]):
+    # Late-16: DGG interval contains 0 and Q16 passes (point estimate sign is unconstrained)
+    if lower <= 0 <= upper and bool(q16.get("Q16", False)):
         return "Late-16"
+    # Fully negative interval (upper < 0) or Q16 failure returns No Prediction
     return "No Prediction"
 
 
@@ -106,11 +158,13 @@ def analyze_dgg(payload: Mapping[str, Any]) -> dict[str, Any]:
     tau_r = float(payload.get("tau_R", TAU_R_DEFAULT))
     dgg = paired_corpus_delta(s16, a28, left_name="S16", right_name="A28", replicates=replicates, seed=seed)
     q16 = evaluate_q16(base, full_sft, s16, tau_r=tau_r, replicates=replicates, seed=seed)
+    probe_eligibility = evaluate_probe_eligibility(q16)
     return {
         "definition": "DGG = CER(S16) - CER(A28)",
         "conditions": {"Base": corpus_cer(base), "Full-SFT": corpus_cer(full_sft), "S16": corpus_cer(s16), "A28": corpus_cer(a28)},
         "DGG": dgg,
         "Q16": q16,
-        "decision": decide_depth(dgg, q16),
+        "probe_eligibility": probe_eligibility,
+        "decision": decide_depth(dgg, q16, probe_eligible=probe_eligibility["passed"]),
         "boundary": "Diagnostic S16/A28 hybrids are not the trained Late-16/Full-28 PEFT allocations.",
     }

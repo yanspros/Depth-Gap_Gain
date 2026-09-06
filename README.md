@@ -19,13 +19,14 @@ Embeddings and acoustic/output interfaces remain on the Base path in both hybrid
 
 ## Decision rule
 
-The canonical rule is implemented in `src/depth_gap_gain/dgg.py`.
+The canonical decision rule implements Eq.(4) from the paper, specified in `src/depth_gap_gain/dgg.py` and [docs/CANONICAL_DECISION_CONTRACT.md](docs/CANONICAL_DECISION_CONTRACT.md):
 
-- **Full-28:** DGG point estimate > 0 and its paired 95% CI lower bound > 0.
-- **Late-16:** DGG point estimate >= 0, CI includes zero, and Q16 passes.
-- **No Prediction:** all other cases. A negative DGG is never converted to a Late-16 prediction.
+1. **Probe eligibility (global):** the paired bootstrap 95% CI lower bound for Base-to-Full-SFT gain must be strictly greater than zero (`CI_lower(CER(Base) - CER(Full-SFT)) > 0`). If this condition is not met (lower bound <= 0), the selector returns **No Prediction** regardless of DGG.
+2. **Full-28:** probe eligible, DGG point estimate > 0, and DGG paired 95% CI lower bound > 0 (`CI_lower(DGG) > 0`).
+3. **Late-16:** probe eligible, DGG paired 95% CI includes zero (`CI_lower(DGG) <= 0 <= CI_upper(DGG)`), and Q16 passes. This branch does **not** require a non-negative DGG point estimate.
+4. **No Prediction:** all other cases, including a DGG CI wholly below zero (`CI_upper(DGG) < 0`), Q16 failure when the CI crosses zero, or an ineligible probe.
 
-`Q16` requires, on the complete development panel: (i) a positive lower bound for Base-to-Full-SFT gain, (ii) a positive lower bound for Base-to-S16 gain, and (iii) `R16 >= tau_R`, where `R16=(CER_Base-CER_S16)/(CER_Base-CER_FullSFT)` and `tau_R=0.5` by default. For every leave-one-target-out panel, Q16 checks only the S16 point gain and R16; it intentionally does not recompute a bootstrap.
+`Q16` requires, on the complete development panel: (i) a positive lower bound for Base-to-Full-SFT gain, (ii) a positive lower bound for Base-to-S16 gain, and (iii) `R16 >= tau_R`, where `R16=(CER_Base-CER_S16)/(CER_Base-CER_FullSFT)` and `tau_R=0.5` by default. For every leave-one-target-out panel, Q16 checks only the S16 point gain (`> 0`) and R16 (`>= tau_R`); it intentionally does not recompute a bootstrap. An undefined/near-zero Full-SFT denominator fails Q16 safely.
 
 ## Install
 

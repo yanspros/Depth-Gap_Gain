@@ -6,6 +6,12 @@ The audited backbone has 28 Transformer blocks (`llm.layers.0` through `llm.laye
 
 `S16` restores blocks 12--27. `A28` restores all 28 Transformer blocks but is still a Base-shell diagnostic hybrid. The primary DGG is `CER(S16)-CER(A28)` on the same development targets, using target-level paired bootstrap and corpus CER (`sum edits / sum reference characters`).
 
+## Bounded decision rule
+
+The selector first requires **probe eligibility**: the paired bootstrap 95% CI lower bound for Base-to-Full-SFT development gain must be strictly positive. If it is not, the only output is `No Prediction`.
+
+Given eligibility, `Full-28` requires a positive DGG point estimate and a strictly positive DGG CI lower bound. `Late-16` requires a DGG CI that includes zero and a passing Q16; it does not impose a point-estimate sign condition. A DGG CI wholly below zero is `No Prediction`. The full boundary specification is [CANONICAL_DECISION_CONTRACT.md](CANONICAL_DECISION_CONTRACT.md).
+
 ## Q16
 
 On the complete development panel, Q16 requires the lower bound of each Base-to-Full-SFT and Base-to-S16 gain CI to be positive, plus `R16 >= 0.5`. The leave-one-target-out check operates on corpus point estimates only: every omitted-target panel must retain a positive S16 gain and `R16 >= 0.5`. It does not run an inner bootstrap.

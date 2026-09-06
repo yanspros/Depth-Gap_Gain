@@ -50,6 +50,24 @@
       "point": 0.011668611435239206,
       "q16": "NOT_APPLICABLE_DGG_FULL_PRIORITY"
     },
+    "khmer_omniasr": {
+      "evaluator": "omniASR_LLM_Unlimited_7B_v2",
+      "route": "khm_Khmr",
+      "bootstrap": {
+        "ci": "two-sided percentile 95%",
+        "replicates": 10000,
+        "seed": 20260727,
+        "unit": "target_id"
+      },
+      "ci95": [
+        0.001840087958152203,
+        0.03320143272427206
+      ],
+      "decision": "FULL_28",
+      "panel": "dev_in_domain",
+      "point": 0.01738259126949551,
+      "q16": "NOT_APPLICABLE_DGG_FULL_PRIORITY"
+    },
     "lao": {
       "bootstrap": {
         "ci": "two-sided percentile 95%",
