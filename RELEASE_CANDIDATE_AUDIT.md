@@ -12,7 +12,7 @@
 
 - 公开仓库仅含新写的 DGG/Q16、hybrid wiring、残差/LoRA 预算、诊断辅助函数和脱敏数值资产；未 vendor OmniVoice、PEFT、Hugging Face、PyTorch 或 evaluator 源码。
 - OmniVoice 和 Hugging Face PEFT 的上游 LICENSE 均为 Apache-2.0；它们在本仓库中仅作为外部依赖。没有发现被跟踪的 GPL/AGPL 源码。因此，第三方依赖本身不阻止将独立原创代码以 Apache-2.0 发布；但这不替代对本项目代码实际版权主体的确认。
-- 在隔离 `/tmp` 虚拟环境中，`pip install -e '.[plot,test]'`、导入、`--help`、三种 toy case、`pytest -q`（10 passed）、`reproduce_table1.py`、`reproduce_fig2.py` 和 `reproduce_table2.py` 均通过。Table 2 对人类 P/N/S 正确输出不可用状态，未伪造人评数值。
+- 在隔离 `/tmp` 虚拟环境中，`pip install -e '.[plot,test]'`、导入、`--help`、三种 toy case、`pytest -q`（10 passed）、`reproduce_table1.py`、`reproduce_fig2.py` 和 `reproduce_table2.py` 均通过。这是初次发布的历史测试记录；人评状态已由下述 20-listener release 更新，未伪造人评数值。
 - 当前 staged-equivalent 候选为 59 个文件；无文件超过 1 MiB，无音频、checkpoint、模型权重或大二进制候选。凭据与机器相关绝对路径扫描未发现真实泄露；普通算法术语不视为 secret。
 - 所有四个公开 DGG 数值与本次审计输入一致：Khmer `+1.17 [ +0.35, +2.03 ]`、Lao `+0.88 [ -2.66, +4.43 ]` 且 `Q16=PASS`、Burmese `+2.19 [ +1.40, +2.98 ]`、Finnish `+1.34 [ +0.49, +2.23 ]`（均为百分点）。
 
@@ -40,7 +40,7 @@
 
 ## 人类 P/N/S 边界
 
-人类 P/N/S 仍为 `UNAVAILABLE FOR PUBLIC REPRODUCTION`。公开脚本仅生成自动指标与明确的 unavailable 标记；没有从 manuscript、ASR、SIM-o 或 UTMOS 填补人评结果。
+2026-09-18 更新：人类 P/N/S 的 20-listener 权威结果已通过 raw-to-estimator-to-output-to-Table-3 核对，状态为 `HUMAN_EVAL_REPRO_AUDIT_PASS`。公开的是 24-cell 汇总、实际 CI 实现、schema 与去敏来源哈希；原始 trial 不公开。历史 10-listener 协议已 superseded，不参与最终论文或当前 Gate。见 [Human evaluation](docs/HUMAN_EVALUATION.md)。该更新仅关闭人评材料缺项，不改变本文件中的其他历史审计结论。
 
 ## 修改与未修改
 

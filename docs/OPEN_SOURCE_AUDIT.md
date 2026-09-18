@@ -19,7 +19,14 @@ An older implementation described a SiLU capsule. The formal residual allocation
 
 ## Finnish and human-evaluation boundaries
 
-The comparator summary marks the Finnish PEFT outcome `INCONCLUSIVE`; it is not counted as a resolved Full-28 validation. The research package records human MOS/A-B evidence as `NOT_YET_RUN`; no validated human P/N/S provenance asset was found. Human values are not synthesized from ASR, SIM-o, UTMOS, or manuscript text and are not published here.
+The comparator summary marks the Finnish PEFT outcome `INCONCLUSIVE`; it is not counted as a resolved Full-28 validation.
+
+Human-evaluation update (2026-09-18): the audited 20-listener release now
+provides final Table 3 aggregates and the actual variance-component normal-CI
+estimator. All 24 point estimates and interval endpoints match the manuscript.
+Raw trials remain private; see [HUMAN_EVALUATION.md](HUMAN_EVALUATION.md).
+This human-only update does not revise the historical comparator assets or
+DGG/Q16 implementation.
 
 ## Redistribution boundary
 

@@ -78,7 +78,28 @@ python scripts/reproduce_fig2.py
 python scripts/run_functional_depth_analysis.py
 ```
 
-`reproduce_table2.py` explicitly emits `UNAVAILABLE` for human P/N/S evidence: the canonical server package did not contain validated public provenance for a human-listening result, and objective ASR/quality metrics are not substituted.
+### Human listening evaluation (final manuscript Table 3)
+
+Human listening evaluation used 20 adult native listeners per language and 40
+test items for each of four languages: Burmese, Lao, Finnish, and Amharic.
+Residual and LoRA Full-28/Late-16 comparisons were evaluated separately on
+pronunciation, naturalness, and speaker similarity, yielding 800 judgments per
+criterion per comparison (19,200 total). Table 3 reports raw preference
+proportions with listener/item-aware variance-component normal confidence
+intervals. The audited 20-listener release reproduces all 24 Table 3 cells.
+All 24 point estimates favor the selected allocation; 18 intervals exclude
+50% and six include it.
+
+```bash
+python scripts/reproduce_human_eval_table3.py
+```
+
+This command validates and renders the public aggregates; raw replay requires
+authorized local trials and NumPy/pandas. Raw trials and manifests are not
+published. See [Human evaluation](docs/HUMAN_EVALUATION.md) for the actual
+estimator, audit provenance, schema, and replay command. The legacy
+`reproduce_table2.py` command retains its existing cross-PEFT output and now
+links to this audited human-evaluation release.
 
 ## Data, licensing, and limitations
 

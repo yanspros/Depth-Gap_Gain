@@ -15,6 +15,14 @@ python scripts/reproduce_fig2.py
 
 This reproduces DGG/Q16 logic, deterministic statistics, curated Table 1/2 numeric assets, and the public development-only suffix-restoration figure. No checkpoint or audio is required.
 
+### Human Table 3 (CPU only)
+
+`python scripts/reproduce_human_eval_table3.py` renders and checks the public
+20-listener aggregates using only the Python standard library. To replay the
+estimator, install NumPy and pandas, then supply authorized local trials with
+`--trials /path/to/authorized_trials.csv`. Raw records are not bundled. See
+[HUMAN_EVALUATION.md](HUMAN_EVALUATION.md) for the method and output status.
+
 ## Level 2 — pretrained model plus public data
 
 Obtain OmniVoice from its upstream repository, a compatible pretrained model, and legal public corpus access yourself. Point `DATA_ROOT`, `MODEL_ROOT`, and `OUTPUT_DIR` to your own locations. Use `configs/examples/dgg.yaml` to construct Base-shell S16/A28 hybrids, verify wiring, generate development audio, and evaluate with an independently licensed evaluator. The repository does not ship evaluator weights or audio data.

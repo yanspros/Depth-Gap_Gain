@@ -31,13 +31,13 @@
 
 ## 已解决与未解决
 
-已解决：核心算法可运行、Q16 leave-one-target-out 不重做 bootstrap、Full/Late 预算可计算、公开结果可无 GPU 重建、Human P/N/S 缺失不会被自动指标伪造。
+已解决：核心算法可运行、Q16 leave-one-target-out 不重做 bootstrap、Full/Late 预算可计算、公开结果可无 GPU 重建。2026-09-18 human-only 更新已加入真实 20-listener Table 3 汇总与估计器，不使用自动指标替代人评。
 
 未解决：
 
 1. 发布 LICENSE 尚未由仓库所有者选择，故未创建顶层 `LICENSE`。
 2. 已审计到 OmniVoice 为 Apache-2.0，但本仓库不重分发其代码；未来新增任何复制内容前仍需重新做兼容性核验。
-3. 人类 P/N/S 的已验证 public provenance 未在服务器端研究包中发现；本发布明确标为 `UNAVAILABLE`，等待未来合法 provenance import。
+3. 人评历史缺项已由 2026-09-18 的 20-listener release 闭合，见 [Human evaluation](docs/HUMAN_EVALUATION.md)。公开汇总与估计器，原始 trial 和 manifest 不公开；旧 10-listener 协议仅作 superseded 历史记录。
 
 ## 修改情况与主要产物
 

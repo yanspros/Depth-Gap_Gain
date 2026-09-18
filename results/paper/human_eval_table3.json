@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "manuscript_table": "Table 3",
+  "authority_version": "20-listener",
+  "protocol": {
+    "languages": [
+      "Burmese",
+      "Lao",
+      "Finnish",
+      "Amharic"
+    ],
+    "peft": [
+      "Residual",
+      "LoRA"
+    ],
+    "criteria": [
+      "pronunciation",
+      "naturalness",
+      "speaker_similarity"
+    ],
+    "listeners_per_language": 20,
+    "items_per_language": 40,
+    "judgments_per_comparison_criterion": 800,
+    "total_judgments": 19200,
+    "no_trials_excluded": true
+  },
+  "estimator": {
+    "name": "listener/item variance-component normal CI",
+    "point_estimate": "raw preference proportion",
+    "confidence_level": 0.95,
+    "z": 1.959963984540054,
+    "pooling": "equal-weight method of moments across all 24 comparisons; non-positive components truncated AFTER pooling",
+    "clipping": [
+      0,
+      1
+    ],
+    "bootstrap_resamples": 0,
+    "glmm": "GLMM_NOT_AUDITABLE; no GLMM output used",
+    "multiplicity": "per-comparison; no multiplicity correction",
+    "tau_listener_pp": 1.3198088452059156,
+    "tau_item_pp": 3.2896576502623303
+  },
+  "summary": {
+    "point_estimates_above_50": 24,
+    "ci_excludes_50": 18,
+    "ci_includes_50": 6,
+    "lower_above_50_by_criterion": {
+      "pronunciation": 8,
+      "naturalness": 7,
+      "speaker_similarity": 3
+    }
+  },
+  "provenance": {
+    "status": "HUMAN_EVAL_REPRO_AUDIT_PASS",
+    "scope": "Author-supplied raw-to-script-to-output-to-LaTeX computational correspondence; not independent verification of collection or interval coverage.",
+    "integrity": {
+      "raw_trials": 19200,
+      "duplicate_rows": 0,
+      "duplicate_trial_keys": 0,
+      "missing_preference_values": 0,
+      "illegal_or_tie_values": 0,
+      "empty_key_fields": 0,
+      "unexpected_settings": [],
+      "unexpected_criteria": [],
+      "manifest_duplicate_pairs": 0,
+      "manifest_unexpected_languages": [],
+      "missing_pairs": 0,
+      "unexpected_pairs": 0,
+      "invalid_listener_ids": 0,
+      "invalid_item_ids": 0,
+      "comparison_errors": 0,
+      "manifest_design_errors": 0,
+      "manifest_raw_set_errors": 0,
+      "cell_count_errors": 0,
+      "script_excluded_rows": 0
+    },
+    "point_matches": 24,
+    "lower_bound_matches": 24,
+    "upper_bound_matches": 24,
+    "source_sha256": {
+      "paired_preference_trials_deidentified.csv": "3467dabe5df4eccdaa828b944b20ba20d750554d13489cb46aa4bef27f1556ce",
+      "listener_item_manifest.csv": "cbad353b38eabad0eb47323032d878c63a0d0595eb99344ce9f1f5c27fd8f356",
+      "ci_table4.py": "8ae41436b74978f23008b7ca1147d1dbd814ff80d791ff1b875042ac2ed31ef6",
+      "table4_cells.json": "4ef6a99a28aab49967df9c9d78fe9e466fc4c82d0d51eb5c7eb7637756d70db0",
+      "table4_cis.csv": "a92a9d9653e4eb18c073329a8523fb4c7ceaad32fe21f8101d1a377d1f592009",
+      "render_paper_table.py": "b4c4459c9f7f9686d4ccdd6167e3ecc5c4ddfb929e9f90eb9183f042cc9f0e79"
+    },
+    "audited_environment": {
+      "python": "3.14.7",
+      "numpy": "2.5.2",
+      "pandas": "3.0.5"
+    },
+    "raw_trials_public": false,
+    "raw_release_status": "RAW_TRIAL_PUBLIC_RELEASE_PENDING_USER_CONFIRMATION",
+    "historical_protocol": {
+      "version": "10-listener",
+      "status": "SUPERSEDED",
+      "used_in_current_manuscript": false,
+      "used_in_current_gate": false
+    }
+  },
+  "cells": {
+    "Burmese Residual": {
+      "comparison": "Full vs Last",
+      "selected_allocation": "Full-28",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 62.125,
+          "ci95": [
+            58.56515748492376,
+            65.68484251507624
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 55.00000000000001,
+          "ci95": [
+            51.358794673354346,
+            58.64120532664566
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 52.25,
+          "ci95": [
+            48.5956720744657,
+            55.90432792553428
+          ]
+        }
+      }
+    },
+    "Burmese LoRA": {
+      "comparison": "Full vs Last",
+      "selected_allocation": "Full-28",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 63.74999999999999,
+          "ci95": [
+            60.218629577829574,
+            67.28137042217041
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 57.62500000000001,
+          "ci95": [
+            54.005712667111695,
+            61.24428733288831
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 56.75,
+          "ci95": [
+            53.12237836392188,
+            60.37762163607812
+          ]
+        }
+      }
+    },
+    "Lao Residual": {
+      "comparison": "Last vs Full",
+      "selected_allocation": "Late-16",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 68.5,
+          "ci95": [
+            65.0743617065996,
+            71.92563829340041
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 52.37500000000001,
+          "ci95": [
+            48.72105192523022,
+            56.028948074769794
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 57.62500000000001,
+          "ci95": [
+            54.005712667111695,
+            61.24428733288831
+          ]
+        }
+      }
+    },
+    "Lao LoRA": {
+      "comparison": "Last vs Full",
+      "selected_allocation": "Late-16",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 55.625,
+          "ci95": [
+            51.988175956766504,
+            59.2618240432335
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 58.5,
+          "ci95": [
+            54.890084478939215,
+            62.10991552106078
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 52.75,
+          "ci95": [
+            49.097314956292415,
+            56.40268504370758
+          ]
+        }
+      }
+    },
+    "Finnish Residual": {
+      "comparison": "Full vs Last",
+      "selected_allocation": "Full-28",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 58.12500000000001,
+          "ci95": [
+            54.51094044906015,
+            61.73905955093986
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 55.00000000000001,
+          "ci95": [
+            51.358794673354346,
+            58.64120532664566
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 52.5,
+          "ci95": [
+            48.84645235122043,
+            56.15354764877958
+          ]
+        }
+      }
+    },
+    "Finnish LoRA": {
+      "comparison": "Full vs Last",
+      "selected_allocation": "Full-28",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 57.25,
+          "ci95": [
+            53.62701421892646,
+            60.87298578107354
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 56.125,
+          "ci95": [
+            52.492056509078786,
+            59.757943490921214
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 52.625,
+          "ci95": [
+            48.97187335920222,
+            56.27812664079779
+          ]
+        }
+      }
+    },
+    "Amharic Residual": {
+      "comparison": "Last vs Full",
+      "selected_allocation": "Late-16",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 61.5,
+          "ci95": [
+            57.93021279938938,
+            65.06978720061062
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 57.62500000000001,
+          "ci95": [
+            54.005712667111695,
+            61.24428733288831
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 55.75,
+          "ci95": [
+            52.114114753101326,
+            59.385885246898674
+          ]
+        }
+      }
+    },
+    "Amharic LoRA": {
+      "comparison": "Last vs Full",
+      "selected_allocation": "Late-16",
+      "n_listeners": 20,
+      "n_items": 40,
+      "n_judgments": 800,
+      "criteria": {
+        "pronunciation": {
+          "preference_percent": 58.75,
+          "ci95": [
+            55.142953811601494,
+            62.35704618839851
+          ]
+        },
+        "naturalness": {
+          "preference_percent": 56.00000000000001,
+          "ci95": [
+            52.36605501252315,
+            59.63394498747686
+          ]
+        },
+        "speaker_similarity": {
+          "preference_percent": 53.25,
+          "ci95": [
+            49.59928739039246,
+            56.90071260960753
+          ]
+        }
+      }
+    }
+  }
+}

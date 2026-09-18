@@ -24,11 +24,9 @@ def main() -> int:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader(); writer.writerows(rows)
     args.status_output.parent.mkdir(parents=True, exist_ok=True)
-    args.status_output.write_text(json.dumps({
-        "human_P_N_S": "UNAVAILABLE",
-        "reason": "No validated public human-listening provenance asset was present in the canonical server package.",
-        "automatic_metrics_are_not_human_evidence": True,
-    }, indent=2) + "\n", encoding="utf-8")
+    status_source = Path(__file__).resolve().parents[1] / "results/paper/dgg/human_evidence_status.json"
+    status = json.loads(status_source.read_text(encoding="utf-8"))
+    args.status_output.write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     print(args.output)
     return 0
 

@@ -1,6 +1,13 @@
 {
-  "human_P_N_S": "UNAVAILABLE",
-  "canonical_status": "NOT_YET_RUN",
-  "reason": "The canonical server-side paper package lacks validated public provenance for a human-listening result. Automatic ASR and objective quality metrics are not substituted for human evidence.",
-  "redistributed": false
+  "human_P_N_S": "HUMAN_EVAL_REPRO_AUDIT_PASS",
+  "authority_version": "20-listener",
+  "manuscript_table": "Table 3",
+  "aggregate_asset": "results/paper/human_eval_table3.json",
+  "documentation": "docs/HUMAN_EVALUATION.md",
+  "reproduction_script": "scripts/reproduce_human_eval_table3.py",
+  "summary": {"cells": 24, "point_estimates_above_50": 24, "ci_excludes_50": 18, "ci_includes_50": 6},
+  "automatic_metrics_are_not_human_evidence": true,
+  "aggregate_redistributed": true,
+  "raw_trials_redistributed": false,
+  "raw_release_status": "RAW_TRIAL_PUBLIC_RELEASE_PENDING_USER_CONFIRMATION"
 }

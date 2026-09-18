@@ -10,4 +10,9 @@
 | `results/paper/functional_depth/*` | S12--A28 landscape and Holm sensitivity | development-only functional-analysis archive | post-hoc development-only functional analysis |
 | `results/paper/figures/figure2_suffix_restoration_profiles.json` | Figure 2 source data | Burmese/Lao development profile | post-hoc functional sanity check |
 
-The current repository does not distribute Human P/N/S: the server-side canonical paper package records human listening evidence as `NOT_YET_RUN`. `scripts/reproduce_table2.py` therefore writes an explicit unavailable status.
+The final manuscript's human Table 3 is released separately as
+`results/paper/human_eval_table3.json`; `scripts/reproduce_human_eval_table3.py`
+renders its 24 cells. This supersedes the earlier missing-human-evidence status.
+The legacy cross-PEFT `table2` filenames above are unchanged and are not the
+final human Table 3. See [HUMAN_EVALUATION.md](HUMAN_EVALUATION.md) for the
+20-listener authority and restricted raw-data replay.

@@ -29,3 +29,21 @@ This repository was prepared from a read-only canonical research checkout. To av
 | Finnish | `730839316de585f4c8298ec0e1712efc10fb19c6fa4e36eb741cb8d51ebcf6aa` | `0be8c1f8d7dcc22df6daf49efbe339d84ec6653c37d5be139507e62e073e4964` | E12 / step 16263 | FLEURS development, 415 targets |
 
 All use `llm.layers.0...llm.layers.27`. The Full-SFT target is the native OmniVoice masked eight-codebook cross-entropy. The public package carries no model, token, prompt, or target record capable of re-running this computation.
+
+## Human Table 3 update (2026-09-18)
+
+The 20-listener authority supplies the final human-evaluation aggregate and
+actual variance-component normal-CI estimator. Source identities below are
+filenames and SHA256 only; private trial records and manifests are not copied.
+Public mapping: `results/paper/human_eval_table3.json` and
+`scripts/reproduce_human_eval_table3.py`. See
+[HUMAN_EVALUATION.md](HUMAN_EVALUATION.md) for audit scope and history.
+
+| Authoritative source filename | SHA256 |
+|---|---|
+| `paired_preference_trials_deidentified.csv` | `3467dabe5df4eccdaa828b944b20ba20d750554d13489cb46aa4bef27f1556ce` |
+| `listener_item_manifest.csv` | `cbad353b38eabad0eb47323032d878c63a0d0595eb99344ce9f1f5c27fd8f356` |
+| `ci_table4.py` | `8ae41436b74978f23008b7ca1147d1dbd814ff80d791ff1b875042ac2ed31ef6` |
+| `table4_cells.json` | `4ef6a99a28aab49967df9c9d78fe9e466fc4c82d0d51eb5c7eb7637756d70db0` |
+| `table4_cis.csv` | `a92a9d9653e4eb18c073329a8523fb4c7ceaad32fe21f8101d1a377d1f592009` |
+| `render_paper_table.py` | `b4c4459c9f7f9686d4ccdd6167e3ecc5c4ddfb929e9f90eb9183f042cc9f0e79` |
